@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="heart_dimens">50dp</dimen>
+    <dimen name="heart_margin">10dp</dimen>
+    <dimen name="default_margin">16dp</dimen>
+    <dimen name="character_dimens">120dp</dimen>
+    <dimen name="name_size">32dp</dimen>
+    <dimen name="rock_width">130dp</dimen>
+    <dimen name="rock_height">100dp</dimen>
+</resources>

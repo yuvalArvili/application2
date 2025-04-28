@@ -1,0 +1,324 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background__1_"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_margin="@dimen/default_margin"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_heart0"
+            android:layout_width="@dimen/heart_dimens"
+            android:layout_height="@dimen/heart_dimens"
+            app:srcCompat="@drawable/heart" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_heart1"
+            android:layout_width="@dimen/heart_dimens"
+            android:layout_height="@dimen/heart_dimens"
+            android:layout_marginHorizontal="@dimen/heart_margin"
+            app:srcCompat="@drawable/heart" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_heart2"
+            android:layout_width="@dimen/heart_dimens"
+            android:layout_height="@dimen/heart_dimens"
+            android:visibility="visible"
+            app:srcCompat="@drawable/heart" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/main_IMG_character0"
+        android:layout_width="@dimen/character_dimens"
+        android:layout_height="@dimen/character_dimens"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:visibility="visible"
+        app:srcCompat="@drawable/character" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/main_IMG_character1"
+        android:layout_width="@dimen/character_dimens"
+        android:layout_height="@dimen/character_dimens"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible"
+        app:srcCompat="@drawable/character" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/main_IMG_character2"
+        android:layout_width="@dimen/character_dimens"
+        android:layout_height="@dimen/character_dimens"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:visibility="visible"
+        app:srcCompat="@drawable/character" />
+
+
+    <RelativeLayout
+        android:id="@+id/matrix_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <!-- Row 0 -->
+        <ImageView
+            android:id="@+id/cell_0_0"
+            android:layout_width="@dimen/rock_width"
+            android:layout_height="@dimen/rock_height"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/rock"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/cell_0_1"
+            android:layout_width="@dimen/rock_width"
+            android:layout_height="@dimen/rock_height"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/rock"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/cell_0_2"
+            android:layout_width="@dimen/rock_width"
+            android:layout_height="@dimen/rock_height"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/rock"
+            android:visibility="visible" />
+
+        <!-- Row 1 -->
+        <ImageView
+            android:id="@+id/cell_1_0"
+            android:layout_width="@dimen/rock_width"
+            android:layout_height="@dimen/rock_height"
+            android:layout_marginTop="130dp"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/rock"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/cell_1_1"
+            android:layout_width="@dimen/rock_width"
+            android:layout_height="@dimen/rock_height"
+            android:layout_marginTop="130dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/rock"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/cell_1_2"
+            android:layout_width="@dimen/rock_width"
+            android:layout_height="@dimen/rock_height"
+            android:layout_marginTop="130dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/rock"
+            android:visibility="visible" />
+
+        <!-- Row 2 -->
+        <ImageView
+            android:id="@+id/cell_2_0"
+            android:layout_width="@dimen/rock_width"
+            android:layout_height="@dimen/rock_height"
+            android:layout_marginTop="230dp"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/rock"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/cell_2_1"
+            android:layout_width="@dimen/rock_width"
+            android:layout_height="@dimen/rock_height"
+            android:layout_marginTop="230dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/rock"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/cell_2_2"
+            android:layout_width="@dimen/rock_width"
+            android:layout_height="@dimen/rock_height"
+            android:layout_marginTop="230dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/rock"
+            android:visibility="visible" />
+
+        <!-- Row 3 -->
+        <ImageView
+            android:id="@+id/cell_3_0"
+            android:layout_width="@dimen/rock_width"
+            android:layout_height="@dimen/rock_height"
+            android:layout_marginTop="330dp"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/rock"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/cell_3_1"
+            android:layout_width="@dimen/rock_width"
+            android:layout_height="@dimen/rock_height"
+            android:layout_marginTop="330dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/rock"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/cell_3_2"
+            android:layout_width="@dimen/rock_width"
+            android:layout_height="@dimen/rock_height"
+            android:layout_marginTop="330dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/rock"
+            android:visibility="visible" />
+
+        <!-- Row 4 -->
+        <ImageView
+            android:id="@+id/cell_4_0"
+            android:layout_width="@dimen/rock_width"
+            android:layout_height="@dimen/rock_height"
+            android:layout_marginTop="430dp"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/rock"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/cell_4_1"
+            android:layout_width="@dimen/rock_width"
+            android:layout_height="@dimen/rock_height"
+            android:layout_marginTop="430dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/rock"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/cell_4_2"
+            android:layout_width="@dimen/rock_width"
+            android:layout_height="@dimen/rock_height"
+            android:layout_marginTop="430dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/rock"
+            android:visibility="visible" />
+
+        <!-- Row 5 -->
+        <ImageView
+            android:id="@+id/cell_5_0"
+            android:layout_width="@dimen/rock_width"
+            android:layout_height="@dimen/rock_height"
+            android:layout_marginTop="530dp"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/rock"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/cell_5_1"
+            android:layout_width="@dimen/rock_width"
+            android:layout_height="@dimen/rock_height"
+            android:layout_marginTop="530dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/rock"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/cell_5_2"
+            android:layout_width="@dimen/rock_width"
+            android:layout_height="@dimen/rock_height"
+            android:layout_marginTop="530dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/rock"
+            android:visibility="visible" />
+
+        <!-- Row 6 -->
+        <ImageView
+            android:id="@+id/cell_6_0"
+            android:layout_width="@dimen/rock_width"
+            android:layout_height="@dimen/rock_height"
+            android:layout_marginTop="630dp"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/rock"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/cell_6_1"
+            android:layout_width="@dimen/rock_width"
+            android:layout_height="@dimen/rock_height"
+            android:layout_marginTop="630dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/rock"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/cell_6_2"
+            android:layout_width="@dimen/rock_width"
+            android:layout_height="@dimen/rock_height"
+            android:layout_marginTop="630dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/rock"
+            android:visibility="visible" />
+
+        <!-- Row 7 -->
+        <ImageView
+            android:id="@+id/cell_7_0"
+            android:layout_width="@dimen/rock_width"
+            android:layout_height="@dimen/rock_height"
+            android:layout_marginTop="800dp"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/rock"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/cell_7_1"
+            android:layout_width="@dimen/rock_width"
+            android:layout_height="@dimen/rock_height"
+            android:layout_marginTop="800dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/rock"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/cell_7_2"
+            android:layout_width="@dimen/rock_width"
+            android:layout_height="@dimen/rock_height"
+            android:layout_marginTop="800dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/rock"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/main_BTN_left"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        app:icon="@drawable/left"
+        app:iconGravity="textStart"
+        app:iconSize="40dp"
+        app:iconPadding="0dp"
+        android:visibility="visible"
+        android:contentDescription="@string/left_button" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/main_BTN_right"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        app:icon="@drawable/right"
+        app:iconGravity="textStart"
+        app:iconSize="40dp"
+        app:iconPadding="0dp"
+        android:visibility="visible"
+        android:contentDescription="@string/right_button" />
+
+
+</RelativeLayout>

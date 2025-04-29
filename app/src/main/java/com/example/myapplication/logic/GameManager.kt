@@ -17,9 +17,8 @@ class GameManager(
     private val characters: Array<AppCompatImageView>,
 ) {
 
-    private val rocks: Array<Array<Boolean>> = Array(maxRows) { Array(maxColumns) { false } }
     private val player = Player(column = 1, lives = hearts.size)
-    private val rockManager = RockManager(maxColumns, maxRows, rocks,player.column,screenMatrix) {
+    private val rockManager = RockManager(maxColumns, maxRows,screenMatrix) {
         checkCollision()
         updateHeartsUI()
         checkGameOver()
@@ -77,15 +76,6 @@ private fun checkCollision() {
             characters[i].visibility = if (i == player.column) View.VISIBLE else ImageView.INVISIBLE
         }
     }
-
-//    private fun updateMatrixUI() {
-//        for (row in 0 until 7) {
-//            for (col in screenMatrix[row].indices) {
-//                screenMatrix[row][col].visibility = if (rockManager.isMeteorAt(row, col)) View.VISIBLE else View.INVISIBLE
-//            }
-//        }
-//    }
-
 
     private fun checkGameOver() {
         if (player.lives <= 0) {

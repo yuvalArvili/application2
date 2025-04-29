@@ -9,8 +9,6 @@ import androidx.core.view.isVisible
 class RockManager(
     private val maxColumns: Int,
     private val maxRows: Int,
-    private val rocks: Array<Array<Boolean>> = Array(maxRows) { Array(maxColumns) { false } },
-    private val playerCol: Int,
     private val screenMatrix: Array<Array<AppCompatImageView>>,
     private val onRockMoved: () -> Unit // callback for collision check
 ) {

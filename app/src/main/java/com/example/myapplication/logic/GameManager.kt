@@ -33,11 +33,7 @@ class GameManager(
     private fun cleanScreen(){
         characters.forEach { it.visibility = ImageView.INVISIBLE }
         characters[player.column].visibility = View.VISIBLE
-        for (i in screenMatrix.indices) {
-            for (j in 0 until screenMatrix[i].size) {
-                screenMatrix[i][j].visibility = ImageView.INVISIBLE
-            }
-        }
+        rockManager.clearAllRocks()
     }
     fun movePlayerLeft() {
         if (player.column > 0) {
@@ -100,6 +96,7 @@ private fun checkCollision() {
 
     private fun restartGame() {
         rockManager.stop()
+        rockManager.clearAllRocks()
         player.lives = player.maxLives
         player.column = maxColumns / 2
 

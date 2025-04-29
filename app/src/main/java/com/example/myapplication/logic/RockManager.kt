@@ -16,9 +16,11 @@ class RockManager(
 ) {
     private val moveHandler = Handler(Looper.getMainLooper())
     private val spawnHandler = Handler(Looper.getMainLooper())
+    private var isRunning = false
 
     private val moveRunnable = object : Runnable {
         override fun run() {
+            if (!isRunning) return
             moveRocksDown()
             moveHandler.postDelayed({
                 onRockMoved()
@@ -29,12 +31,15 @@ class RockManager(
 
     private val spawnRunnable = object : Runnable {
         override fun run() {
+            if (!isRunning) return
             spawnNewRock()
             spawnHandler.postDelayed(this, 2000) //every 2 sec appear new rock
         }
     }
 
     fun start() {
+        if (isRunning) return
+        isRunning = true
         moveHandler.post(moveRunnable)
         spawnHandler.post(spawnRunnable)
     }
@@ -64,42 +69,21 @@ class RockManager(
         }
     }
 
-//    fun moveRocksDown(): Boolean {
-//        var hit = false
-//
-//        for (row in maxRows - 2 downTo 0) {
-//            for (col in 0 until maxColumns) {
-//                if (rocks[row][col]) {
-//                    rocks[row][col] = false
-//                    if (row + 1 == 7) {
-//                        if (playerCol == col) {
-//                            hit = true
-//                        }
-//                    } else {
-//                        rocks[row + 1][col] = true
-//                    }
-//                }
-//            }
-//        }
-//
-//        val randomCol = (0 until maxColumns).random()
-//        rocks[0][randomCol] = true
-//
-//        return hit
-//    }
-
-
     private fun spawnNewRock() {
         val col = (0 until maxColumns).random()
         if (screenMatrix[0][col].isInvisible) {
             screenMatrix[0][col].visibility = View.VISIBLE
         }
     }
-//    fun isMeteorAt(row: Int, col: Int): Boolean {
-//        return rocks[row][col]
-//    }
-
+    fun clearAllRocks() {
+        for (row in screenMatrix.indices) {
+            for (col in screenMatrix[row].indices) {
+                screenMatrix[row][col].visibility = View.INVISIBLE
+            }
+        }
+    }
     fun stop() {
+        isRunning = false
         moveHandler.removeCallbacks(moveRunnable)
         spawnHandler.removeCallbacks(spawnRunnable)
     }

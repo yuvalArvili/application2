@@ -16,10 +16,13 @@ class GameManager(
     private val hearts: Array<AppCompatImageView>,
     private val characters: Array<AppCompatImageView>,
 ) {
+
+    private val rocks: Array<Array<Boolean>> = Array(maxRows) { Array(maxColumns) { false } }
     private val player = Player(column = 1, lives = hearts.size)
-    private val rockManager = RockManager(maxColumns, maxRows, screenMatrix) {
+    private val rockManager = RockManager(maxColumns, maxRows, rocks,player.column,screenMatrix) {
         checkCollision()
         updateHeartsUI()
+        checkGameOver()
     }
 
     fun startGame() {
@@ -52,8 +55,8 @@ class GameManager(
 
 
 private fun checkCollision() {
-    val row = maxRows - 1
-    if (screenMatrix[row][player.column].isVisible) {
+    val rows = maxRows - 1
+    if (screenMatrix[rows][player.column].isVisible) {
         if (player.lives >= 2) {
             SignalManager
                 .getInstance()
@@ -63,12 +66,6 @@ private fun checkCollision() {
                 .vibrate()
         }
         player.loseLife()
-        if (player.lives <= 0) {
-            SignalManager
-                .getInstance()
-                .toast("Game Over!")
-            restartGame()
-        }
     }
 }
 
@@ -84,6 +81,23 @@ private fun checkCollision() {
             characters[i].visibility = if (i == player.column) View.VISIBLE else ImageView.INVISIBLE
         }
     }
+
+//    private fun updateMatrixUI() {
+//        for (row in 0 until 7) {
+//            for (col in screenMatrix[row].indices) {
+//                screenMatrix[row][col].visibility = if (rockManager.isMeteorAt(row, col)) View.VISIBLE else View.INVISIBLE
+//            }
+//        }
+//    }
+
+
+    private fun checkGameOver() {
+        if (player.lives <= 0) {
+            SignalManager.getInstance().toast("Game Over!")
+            restartGame()
+        }
+    }
+
     private fun restartGame() {
         rockManager.stop()
         player.lives = player.maxLives
@@ -98,6 +112,7 @@ private fun checkCollision() {
         Handler(Looper.getMainLooper()).postDelayed({
             startGame()
         }, 5000)
+
     }
 }
 

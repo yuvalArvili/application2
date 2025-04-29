@@ -9,6 +9,8 @@ import androidx.core.view.isVisible
 class RockManager(
     private val maxColumns: Int,
     private val maxRows: Int,
+    private val rocks: Array<Array<Boolean>> = Array(maxRows) { Array(maxColumns) { false } },
+    private val playerCol: Int,
     private val screenMatrix: Array<Array<AppCompatImageView>>,
     private val onRockMoved: () -> Unit // callback for collision check
 ) {
@@ -18,7 +20,9 @@ class RockManager(
     private val moveRunnable = object : Runnable {
         override fun run() {
             moveRocksDown()
-            onRockMoved()
+            moveHandler.postDelayed({
+                onRockMoved()
+            }, 200)
             moveHandler.postDelayed(this, 1000) //every sec rock move down
         }
     }
@@ -60,12 +64,40 @@ class RockManager(
         }
     }
 
+//    fun moveRocksDown(): Boolean {
+//        var hit = false
+//
+//        for (row in maxRows - 2 downTo 0) {
+//            for (col in 0 until maxColumns) {
+//                if (rocks[row][col]) {
+//                    rocks[row][col] = false
+//                    if (row + 1 == 7) {
+//                        if (playerCol == col) {
+//                            hit = true
+//                        }
+//                    } else {
+//                        rocks[row + 1][col] = true
+//                    }
+//                }
+//            }
+//        }
+//
+//        val randomCol = (0 until maxColumns).random()
+//        rocks[0][randomCol] = true
+//
+//        return hit
+//    }
+
+
     private fun spawnNewRock() {
         val col = (0 until maxColumns).random()
         if (screenMatrix[0][col].isInvisible) {
             screenMatrix[0][col].visibility = View.VISIBLE
         }
     }
+//    fun isMeteorAt(row: Int, col: Int): Boolean {
+//        return rocks[row][col]
+//    }
 
     fun stop() {
         moveHandler.removeCallbacks(moveRunnable)

@@ -100,7 +100,7 @@
             android:id="@+id/cell_1_0"
             android:layout_width="@dimen/rock_width"
             android:layout_height="@dimen/rock_height"
-            android:layout_marginTop="130dp"
+            android:layout_marginTop="110dp"
             android:layout_alignParentStart="true"
             android:src="@drawable/rock"
             android:visibility="visible" />
@@ -109,7 +109,7 @@
             android:id="@+id/cell_1_1"
             android:layout_width="@dimen/rock_width"
             android:layout_height="@dimen/rock_height"
-            android:layout_marginTop="130dp"
+            android:layout_marginTop="110dp"
             android:layout_centerHorizontal="true"
             android:src="@drawable/rock"
             android:visibility="visible" />
@@ -118,7 +118,7 @@
             android:id="@+id/cell_1_2"
             android:layout_width="@dimen/rock_width"
             android:layout_height="@dimen/rock_height"
-            android:layout_marginTop="130dp"
+            android:layout_marginTop="110dp"
             android:layout_alignParentEnd="true"
             android:src="@drawable/rock"
             android:visibility="visible" />
@@ -128,7 +128,7 @@
             android:id="@+id/cell_2_0"
             android:layout_width="@dimen/rock_width"
             android:layout_height="@dimen/rock_height"
-            android:layout_marginTop="230dp"
+            android:layout_marginTop="220dp"
             android:layout_alignParentStart="true"
             android:src="@drawable/rock"
             android:visibility="visible" />
@@ -137,7 +137,7 @@
             android:id="@+id/cell_2_1"
             android:layout_width="@dimen/rock_width"
             android:layout_height="@dimen/rock_height"
-            android:layout_marginTop="230dp"
+            android:layout_marginTop="220dp"
             android:layout_centerHorizontal="true"
             android:src="@drawable/rock"
             android:visibility="visible" />
@@ -146,7 +146,7 @@
             android:id="@+id/cell_2_2"
             android:layout_width="@dimen/rock_width"
             android:layout_height="@dimen/rock_height"
-            android:layout_marginTop="230dp"
+            android:layout_marginTop="220dp"
             android:layout_alignParentEnd="true"
             android:src="@drawable/rock"
             android:visibility="visible" />
@@ -184,7 +184,7 @@
             android:id="@+id/cell_4_0"
             android:layout_width="@dimen/rock_width"
             android:layout_height="@dimen/rock_height"
-            android:layout_marginTop="430dp"
+            android:layout_marginTop="440dp"
             android:layout_alignParentStart="true"
             android:src="@drawable/rock"
             android:visibility="visible" />
@@ -193,7 +193,7 @@
             android:id="@+id/cell_4_1"
             android:layout_width="@dimen/rock_width"
             android:layout_height="@dimen/rock_height"
-            android:layout_marginTop="430dp"
+            android:layout_marginTop="440dp"
             android:layout_centerHorizontal="true"
             android:src="@drawable/rock"
             android:visibility="visible" />
@@ -202,7 +202,7 @@
             android:id="@+id/cell_4_2"
             android:layout_width="@dimen/rock_width"
             android:layout_height="@dimen/rock_height"
-            android:layout_marginTop="430dp"
+            android:layout_marginTop="440dp"
             android:layout_alignParentEnd="true"
             android:src="@drawable/rock"
             android:visibility="visible" />
@@ -212,7 +212,7 @@
             android:id="@+id/cell_5_0"
             android:layout_width="@dimen/rock_width"
             android:layout_height="@dimen/rock_height"
-            android:layout_marginTop="530dp"
+            android:layout_marginTop="550dp"
             android:layout_alignParentStart="true"
             android:src="@drawable/rock"
             android:visibility="visible" />
@@ -221,7 +221,7 @@
             android:id="@+id/cell_5_1"
             android:layout_width="@dimen/rock_width"
             android:layout_height="@dimen/rock_height"
-            android:layout_marginTop="530dp"
+            android:layout_marginTop="550dp"
             android:layout_centerHorizontal="true"
             android:src="@drawable/rock"
             android:visibility="visible" />
@@ -230,7 +230,7 @@
             android:id="@+id/cell_5_2"
             android:layout_width="@dimen/rock_width"
             android:layout_height="@dimen/rock_height"
-            android:layout_marginTop="530dp"
+            android:layout_marginTop="550dp"
             android:layout_alignParentEnd="true"
             android:src="@drawable/rock"
             android:visibility="visible" />
@@ -240,7 +240,7 @@
             android:id="@+id/cell_6_0"
             android:layout_width="@dimen/rock_width"
             android:layout_height="@dimen/rock_height"
-            android:layout_marginTop="630dp"
+            android:layout_marginTop="660dp"
             android:layout_alignParentStart="true"
             android:src="@drawable/rock"
             android:visibility="visible" />
@@ -249,7 +249,7 @@
             android:id="@+id/cell_6_1"
             android:layout_width="@dimen/rock_width"
             android:layout_height="@dimen/rock_height"
-            android:layout_marginTop="630dp"
+            android:layout_marginTop="660dp"
             android:layout_centerHorizontal="true"
             android:src="@drawable/rock"
             android:visibility="visible" />
@@ -258,7 +258,7 @@
             android:id="@+id/cell_6_2"
             android:layout_width="@dimen/rock_width"
             android:layout_height="@dimen/rock_height"
-            android:layout_marginTop="630dp"
+            android:layout_marginTop="660dp"
             android:layout_alignParentEnd="true"
             android:src="@drawable/rock"
             android:visibility="visible" />
@@ -268,7 +268,7 @@
             android:id="@+id/cell_7_0"
             android:layout_width="@dimen/rock_width"
             android:layout_height="@dimen/rock_height"
-            android:layout_marginTop="800dp"
+            android:layout_marginTop="770dp"
             android:layout_alignParentStart="true"
             android:src="@drawable/rock"
             android:visibility="invisible" />
@@ -277,7 +277,7 @@
             android:id="@+id/cell_7_1"
             android:layout_width="@dimen/rock_width"
             android:layout_height="@dimen/rock_height"
-            android:layout_marginTop="800dp"
+            android:layout_marginTop="770dp"
             android:layout_centerHorizontal="true"
             android:src="@drawable/rock"
             android:visibility="invisible" />
@@ -286,7 +286,7 @@
             android:id="@+id/cell_7_2"
             android:layout_width="@dimen/rock_width"
             android:layout_height="@dimen/rock_height"
-            android:layout_marginTop="800dp"
+            android:layout_marginTop="770dp"
             android:layout_alignParentEnd="true"
             android:src="@drawable/rock"
             android:visibility="invisible" />

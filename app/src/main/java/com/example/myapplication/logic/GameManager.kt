@@ -64,7 +64,6 @@ private fun checkCollision() {
     }
 }
 
-
     private fun updateHeartsUI() {
         for (i in hearts.indices) {
             hearts[i].visibility = if (i < player.lives) View.VISIBLE else ImageView.INVISIBLE

@@ -9,8 +9,6 @@ import com.example.myapplication.utilites.SignalManager
 
 
 class MainActivity : AppCompatActivity() {
-
-
     private lateinit var main_IMG_hearts: Array<AppCompatImageView>
     private lateinit var main_IMG_charcters: Array<AppCompatImageView>
     private lateinit var main_IMG_rocks: Array<Array<AppCompatImageView>>

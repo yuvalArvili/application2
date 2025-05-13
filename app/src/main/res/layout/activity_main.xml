@@ -4,7 +4,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background__1_"
+    android:background="@drawable/road"
     tools:context=".MainActivity">
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -42,17 +42,18 @@
         android:layout_height="@dimen/character_dimens"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
+        android:layout_marginStart="-10dp"
         android:visibility="visible"
-        app:srcCompat="@drawable/character" />
+        app:srcCompat="@drawable/pink_car" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/main_IMG_character1"
         android:layout_width="@dimen/character_dimens"
         android:layout_height="@dimen/character_dimens"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
+        android:layout_marginStart="75dp"
         android:visibility="visible"
-        app:srcCompat="@drawable/character" />
+        app:srcCompat="@drawable/pink_car" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/main_IMG_character2"
@@ -60,8 +61,29 @@
         android:layout_height="@dimen/character_dimens"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
+        android:layout_marginEnd="155dp"
         android:visibility="visible"
-        app:srcCompat="@drawable/character" />
+        app:srcCompat="@drawable/pink_car" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/main_IMG_character3"
+        android:layout_width="@dimen/character_dimens"
+        android:layout_height="@dimen/character_dimens"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="75dp"
+        android:visibility="visible"
+        app:srcCompat="@drawable/pink_car" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/main_IMG_character4"
+        android:layout_width="@dimen/character_dimens"
+        android:layout_height="@dimen/character_dimens"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="-10dp"
+        android:visibility="visible"
+        app:srcCompat="@drawable/pink_car" />
 
 
     <RelativeLayout
@@ -70,228 +92,603 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true">
 
-        <!-- Row 0 -->
-        <ImageView
-            android:id="@+id/cell_0_0"
+        <!-- ROW 0 -->
+        <ImageView android:id="@+id/cell_0_0"
             android:layout_width="@dimen/rock_width"
             android:layout_height="@dimen/rock_height"
-            android:layout_alignParentStart="true"
+            android:layout_marginStart="-10dp"
+            android:layout_marginTop="0dp"
             android:src="@drawable/rock"
             android:visibility="visible" />
 
-        <ImageView
-            android:id="@+id/cell_0_1"
+        <ImageView android:id="@+id/cell_0_1"
             android:layout_width="@dimen/rock_width"
             android:layout_height="@dimen/rock_height"
-            android:layout_centerHorizontal="true"
+            android:layout_toEndOf="@id/cell_0_0"
+            android:layout_marginStart="-15dp"
+            android:layout_alignTop="@id/cell_0_0"
             android:src="@drawable/rock"
             android:visibility="visible" />
 
-        <ImageView
-            android:id="@+id/cell_0_2"
+        <ImageView android:id="@+id/cell_0_2"
             android:layout_width="@dimen/rock_width"
             android:layout_height="@dimen/rock_height"
-            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@id/cell_0_1"
+            android:layout_marginStart="-20dp"
+            android:layout_alignTop="@id/cell_0_0"
             android:src="@drawable/rock"
             android:visibility="visible" />
 
-        <!-- Row 1 -->
-        <ImageView
-            android:id="@+id/cell_1_0"
+        <ImageView android:id="@+id/cell_0_3"
             android:layout_width="@dimen/rock_width"
             android:layout_height="@dimen/rock_height"
+            android:layout_toEndOf="@id/cell_0_2"
+            android:layout_marginStart="-20dp"
+            android:layout_alignTop="@id/cell_0_0"
+            android:src="@drawable/rock"
+            android:visibility="visible" />
+
+        <ImageView android:id="@+id/cell_0_4"
+            android:layout_width="@dimen/rock_width"
+            android:layout_height="@dimen/rock_height"
+            android:layout_toEndOf="@id/cell_0_3"
+            android:layout_marginStart="-20dp"
+            android:layout_alignTop="@id/cell_0_0"
+            android:src="@drawable/rock"
+            android:visibility="visible" />
+
+        <!-- ROW 1 -->
+        <ImageView android:id="@+id/cell_1_0"
+            android:layout_width="@dimen/rock_width"
+            android:layout_height="@dimen/rock_height"
+            android:layout_marginStart="-10dp"
             android:layout_marginTop="110dp"
-            android:layout_alignParentStart="true"
             android:src="@drawable/rock"
             android:visibility="visible" />
 
-        <ImageView
-            android:id="@+id/cell_1_1"
+        <ImageView android:id="@+id/cell_1_1"
             android:layout_width="@dimen/rock_width"
             android:layout_height="@dimen/rock_height"
-            android:layout_marginTop="110dp"
-            android:layout_centerHorizontal="true"
+            android:layout_toEndOf="@id/cell_1_0"
+            android:layout_marginStart="-15dp"
+            android:layout_alignTop="@id/cell_1_0"
             android:src="@drawable/rock"
             android:visibility="visible" />
 
-        <ImageView
-            android:id="@+id/cell_1_2"
+        <ImageView android:id="@+id/cell_1_2"
             android:layout_width="@dimen/rock_width"
             android:layout_height="@dimen/rock_height"
-            android:layout_marginTop="110dp"
-            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@id/cell_1_1"
+            android:layout_marginStart="-20dp"
+            android:layout_alignTop="@id/cell_1_0"
             android:src="@drawable/rock"
             android:visibility="visible" />
 
-        <!-- Row 2 -->
-        <ImageView
-            android:id="@+id/cell_2_0"
+        <ImageView android:id="@+id/cell_1_3"
             android:layout_width="@dimen/rock_width"
             android:layout_height="@dimen/rock_height"
+            android:layout_toEndOf="@id/cell_1_2"
+            android:layout_marginStart="-20dp"
+            android:layout_alignTop="@id/cell_1_0"
+            android:src="@drawable/rock"
+            android:visibility="visible" />
+
+        <ImageView android:id="@+id/cell_1_4"
+            android:layout_width="@dimen/rock_width"
+            android:layout_height="@dimen/rock_height"
+            android:layout_toEndOf="@id/cell_1_3"
+            android:layout_marginStart="-20dp"
+            android:layout_alignTop="@id/cell_1_0"
+            android:src="@drawable/rock"
+            android:visibility="visible" />
+
+        <!-- ROW 2 -->
+        <ImageView android:id="@+id/cell_2_0"
+            android:layout_width="@dimen/rock_width"
+            android:layout_height="@dimen/rock_height"
+            android:layout_marginStart="-10dp"
             android:layout_marginTop="220dp"
-            android:layout_alignParentStart="true"
             android:src="@drawable/rock"
             android:visibility="visible" />
 
-        <ImageView
-            android:id="@+id/cell_2_1"
+        <ImageView android:id="@+id/cell_2_1"
             android:layout_width="@dimen/rock_width"
             android:layout_height="@dimen/rock_height"
-            android:layout_marginTop="220dp"
-            android:layout_centerHorizontal="true"
+            android:layout_toEndOf="@id/cell_2_0"
+            android:layout_marginStart="-15dp"
+            android:layout_alignTop="@id/cell_2_0"
             android:src="@drawable/rock"
             android:visibility="visible" />
 
-        <ImageView
-            android:id="@+id/cell_2_2"
+        <ImageView android:id="@+id/cell_2_2"
             android:layout_width="@dimen/rock_width"
             android:layout_height="@dimen/rock_height"
-            android:layout_marginTop="220dp"
-            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@id/cell_2_1"
+            android:layout_marginStart="-20dp"
+            android:layout_alignTop="@id/cell_2_0"
             android:src="@drawable/rock"
             android:visibility="visible" />
 
-        <!-- Row 3 -->
-        <ImageView
-            android:id="@+id/cell_3_0"
+        <ImageView android:id="@+id/cell_2_3"
             android:layout_width="@dimen/rock_width"
             android:layout_height="@dimen/rock_height"
+            android:layout_toEndOf="@id/cell_2_2"
+            android:layout_marginStart="-20dp"
+            android:layout_alignTop="@id/cell_2_0"
+            android:src="@drawable/rock"
+            android:visibility="visible" />
+        <ImageView android:id="@+id/cell_2_4"
+            android:layout_width="@dimen/rock_width"
+            android:layout_height="@dimen/rock_height"
+            android:layout_toEndOf="@id/cell_2_3"
+            android:layout_marginStart="-20dp"
+            android:layout_alignTop="@id/cell_2_0"
+            android:src="@drawable/rock"
+            android:visibility="visible" />
+
+        <!-- ROW 3 -->
+        <ImageView android:id="@+id/cell_3_0"
+            android:layout_width="@dimen/rock_width"
+            android:layout_height="@dimen/rock_height"
+            android:layout_marginStart="-10dp"
             android:layout_marginTop="330dp"
-            android:layout_alignParentStart="true"
             android:src="@drawable/rock"
             android:visibility="visible" />
 
-        <ImageView
-            android:id="@+id/cell_3_1"
+        <ImageView android:id="@+id/cell_3_1"
             android:layout_width="@dimen/rock_width"
             android:layout_height="@dimen/rock_height"
-            android:layout_marginTop="330dp"
-            android:layout_centerHorizontal="true"
+            android:layout_toEndOf="@id/cell_3_0"
+            android:layout_marginStart="-15dp"
+            android:layout_alignTop="@id/cell_3_0"
             android:src="@drawable/rock"
             android:visibility="visible" />
 
-        <ImageView
-            android:id="@+id/cell_3_2"
+        <ImageView android:id="@+id/cell_3_2"
             android:layout_width="@dimen/rock_width"
             android:layout_height="@dimen/rock_height"
-            android:layout_marginTop="330dp"
-            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@id/cell_3_1"
+            android:layout_marginStart="-20dp"
+            android:layout_alignTop="@id/cell_3_0"
             android:src="@drawable/rock"
             android:visibility="visible" />
 
-        <!-- Row 4 -->
-        <ImageView
-            android:id="@+id/cell_4_0"
+        <ImageView android:id="@+id/cell_3_3"
             android:layout_width="@dimen/rock_width"
             android:layout_height="@dimen/rock_height"
+            android:layout_toEndOf="@id/cell_3_2"
+            android:layout_marginStart="-20dp"
+            android:layout_alignTop="@id/cell_3_0"
+            android:src="@drawable/rock"
+            android:visibility="visible" />
+
+        <ImageView android:id="@+id/cell_3_4"
+            android:layout_width="@dimen/rock_width"
+            android:layout_height="@dimen/rock_height"
+            android:layout_toEndOf="@id/cell_3_3"
+            android:layout_marginStart="-20dp"
+            android:layout_alignTop="@id/cell_3_0"
+            android:src="@drawable/rock"
+            android:visibility="visible" />
+
+        <!-- ROW 4 -->
+        <ImageView android:id="@+id/cell_4_0"
+            android:layout_width="@dimen/rock_width"
+            android:layout_height="@dimen/rock_height"
+            android:layout_marginStart="-10dp"
             android:layout_marginTop="440dp"
-            android:layout_alignParentStart="true"
             android:src="@drawable/rock"
             android:visibility="visible" />
 
-        <ImageView
-            android:id="@+id/cell_4_1"
+        <ImageView android:id="@+id/cell_4_1"
             android:layout_width="@dimen/rock_width"
             android:layout_height="@dimen/rock_height"
-            android:layout_marginTop="440dp"
-            android:layout_centerHorizontal="true"
+            android:layout_toEndOf="@id/cell_4_0"
+            android:layout_marginStart="-15dp"
+            android:layout_alignTop="@id/cell_4_0"
             android:src="@drawable/rock"
             android:visibility="visible" />
 
-        <ImageView
-            android:id="@+id/cell_4_2"
+        <ImageView android:id="@+id/cell_4_2"
             android:layout_width="@dimen/rock_width"
             android:layout_height="@dimen/rock_height"
-            android:layout_marginTop="440dp"
-            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@id/cell_4_1"
+            android:layout_marginStart="-20dp"
+            android:layout_alignTop="@id/cell_4_0"
             android:src="@drawable/rock"
             android:visibility="visible" />
 
-        <!-- Row 5 -->
-        <ImageView
-            android:id="@+id/cell_5_0"
+        <ImageView android:id="@+id/cell_4_3"
             android:layout_width="@dimen/rock_width"
             android:layout_height="@dimen/rock_height"
+            android:layout_toEndOf="@id/cell_4_2"
+            android:layout_marginStart="-20dp"
+            android:layout_alignTop="@id/cell_4_0"
+            android:src="@drawable/rock"
+            android:visibility="visible" />
+
+        <ImageView android:id="@+id/cell_4_4"
+            android:layout_width="@dimen/rock_width"
+            android:layout_height="@dimen/rock_height"
+            android:layout_toEndOf="@id/cell_4_3"
+            android:layout_marginStart="-20dp"
+            android:layout_alignTop="@id/cell_4_0"
+            android:src="@drawable/rock"
+            android:visibility="visible" />
+
+        <!-- ROW 5 -->
+        <ImageView android:id="@+id/cell_5_0"
+            android:layout_width="@dimen/rock_width"
+            android:layout_height="@dimen/rock_height"
+            android:layout_marginStart="-10dp"
             android:layout_marginTop="550dp"
-            android:layout_alignParentStart="true"
             android:src="@drawable/rock"
             android:visibility="visible" />
 
-        <ImageView
-            android:id="@+id/cell_5_1"
+        <ImageView android:id="@+id/cell_5_1"
             android:layout_width="@dimen/rock_width"
             android:layout_height="@dimen/rock_height"
-            android:layout_marginTop="550dp"
-            android:layout_centerHorizontal="true"
+            android:layout_toEndOf="@id/cell_5_0"
+            android:layout_marginStart="-15dp"
+            android:layout_alignTop="@id/cell_5_0"
             android:src="@drawable/rock"
             android:visibility="visible" />
 
-        <ImageView
-            android:id="@+id/cell_5_2"
+        <ImageView android:id="@+id/cell_5_2"
             android:layout_width="@dimen/rock_width"
             android:layout_height="@dimen/rock_height"
-            android:layout_marginTop="550dp"
-            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@id/cell_5_1"
+            android:layout_marginStart="-20dp"
+            android:layout_alignTop="@id/cell_5_0"
             android:src="@drawable/rock"
             android:visibility="visible" />
 
-        <!-- Row 6 -->
-        <ImageView
-            android:id="@+id/cell_6_0"
+        <ImageView android:id="@+id/cell_5_3"
             android:layout_width="@dimen/rock_width"
             android:layout_height="@dimen/rock_height"
-            android:layout_marginTop="630dp"
-            android:layout_alignParentStart="true"
+            android:layout_toEndOf="@id/cell_5_2"
+            android:layout_marginStart="-20dp"
+            android:layout_alignTop="@id/cell_5_0"
             android:src="@drawable/rock"
             android:visibility="visible" />
 
-        <ImageView
-            android:id="@+id/cell_6_1"
+        <ImageView android:id="@+id/cell_5_4"
             android:layout_width="@dimen/rock_width"
             android:layout_height="@dimen/rock_height"
-            android:layout_marginTop="630dp"
-            android:layout_centerHorizontal="true"
+            android:layout_toEndOf="@id/cell_5_3"
+            android:layout_marginStart="-20dp"
+            android:layout_alignTop="@id/cell_5_0"
             android:src="@drawable/rock"
             android:visibility="visible" />
 
-        <ImageView
-            android:id="@+id/cell_6_2"
+
+        <!-- ROW 6 -->
+        <ImageView android:id="@+id/cell_6_0"
             android:layout_width="@dimen/rock_width"
             android:layout_height="@dimen/rock_height"
-            android:layout_marginTop="630dp"
-            android:layout_alignParentEnd="true"
+            android:layout_marginStart="-10dp"
+            android:layout_marginTop="660dp"
             android:src="@drawable/rock"
             android:visibility="visible" />
 
-        <!-- Row 7 -->
-        <ImageView
-            android:id="@+id/cell_7_0"
+        <ImageView android:id="@+id/cell_6_1"
             android:layout_width="@dimen/rock_width"
             android:layout_height="@dimen/rock_height"
-            android:layout_marginTop="800dp"
-            android:layout_alignParentStart="true"
+            android:layout_toEndOf="@id/cell_6_0"
+            android:layout_marginStart="-15dp"
+            android:layout_alignTop="@id/cell_6_0"
+            android:src="@drawable/rock"
+            android:visibility="visible" />
+
+        <ImageView android:id="@+id/cell_6_2"
+            android:layout_width="@dimen/rock_width"
+            android:layout_height="@dimen/rock_height"
+            android:layout_toEndOf="@id/cell_6_1"
+            android:layout_marginStart="-20dp"
+            android:layout_alignTop="@id/cell_6_0"
+            android:src="@drawable/rock"
+            android:visibility="visible" />
+
+        <ImageView android:id="@+id/cell_6_3"
+            android:layout_width="@dimen/rock_width"
+            android:layout_height="@dimen/rock_height"
+            android:layout_toEndOf="@id/cell_6_2"
+            android:layout_marginStart="-20dp"
+            android:layout_alignTop="@id/cell_6_0"
+            android:src="@drawable/rock"
+            android:visibility="visible" />
+
+        <ImageView android:id="@+id/cell_6_4"
+            android:layout_width="@dimen/rock_width"
+            android:layout_height="@dimen/rock_height"
+            android:layout_toEndOf="@id/cell_6_3"
+            android:layout_marginStart="-20dp"
+            android:layout_alignTop="@id/cell_6_0"
+            android:src="@drawable/rock"
+            android:visibility="visible" />
+
+        <!-- ROW 7 -->
+        <ImageView android:id="@+id/cell_7_0"
+            android:layout_width="@dimen/rock_width"
+            android:layout_height="@dimen/rock_height"
+            android:layout_marginStart="-10dp"
+            android:layout_marginTop="770dp"
             android:src="@drawable/rock"
             android:visibility="invisible" />
 
-        <ImageView
-            android:id="@+id/cell_7_1"
+        <ImageView android:id="@+id/cell_7_1"
             android:layout_width="@dimen/rock_width"
             android:layout_height="@dimen/rock_height"
-            android:layout_marginTop="800dp"
-            android:layout_centerHorizontal="true"
+            android:layout_toEndOf="@id/cell_7_0"
+            android:layout_marginStart="-15dp"
+            android:layout_alignTop="@id/cell_7_0"
             android:src="@drawable/rock"
             android:visibility="invisible" />
 
-        <ImageView
-            android:id="@+id/cell_7_2"
+        <ImageView android:id="@+id/cell_7_2"
             android:layout_width="@dimen/rock_width"
             android:layout_height="@dimen/rock_height"
-            android:layout_marginTop="800dp"
-            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@id/cell_7_1"
+            android:layout_marginStart="-20dp"
+            android:layout_alignTop="@id/cell_7_0"
             android:src="@drawable/rock"
             android:visibility="invisible" />
+
+        <ImageView android:id="@+id/cell_7_3"
+            android:layout_width="@dimen/rock_width"
+            android:layout_height="@dimen/rock_height"
+            android:layout_toEndOf="@id/cell_7_2"
+            android:layout_marginStart="-20dp"
+            android:layout_alignTop="@id/cell_7_0"
+            android:src="@drawable/rock"
+            android:visibility="invisible" />
+
+        <ImageView android:id="@+id/cell_7_4"
+            android:layout_width="@dimen/rock_width"
+            android:layout_height="@dimen/rock_height"
+            android:layout_toEndOf="@id/cell_7_3"
+            android:layout_marginStart="-20dp"
+            android:layout_alignTop="@id/cell_7_0"
+            android:src="@drawable/rock"
+            android:visibility="invisible" />
+
 
     </RelativeLayout>
+
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/matrix_container"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerInParent="true">-->
+
+<!--        &lt;!&ndash; Row 0 &ndash;&gt;-->
+<!--        <ImageView-->
+<!--            android:id="@+id/cell_0_0"-->
+<!--            android:layout_width="@dimen/rock_width"-->
+<!--            android:layout_height="@dimen/rock_height"-->
+<!--            android:layout_alignParentStart="true"-->
+<!--            android:translationX="-25dp"-->
+<!--            android:src="@drawable/rock"-->
+<!--            android:visibility="visible" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/cell_0_1"-->
+<!--            android:layout_width="@dimen/rock_width"-->
+<!--            android:layout_height="@dimen/rock_height"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:src="@drawable/rock"-->
+<!--            android:visibility="visible" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/cell_0_2"-->
+<!--            android:layout_width="@dimen/rock_width"-->
+<!--            android:layout_height="@dimen/rock_height"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:src="@drawable/rock"-->
+<!--            android:visibility="visible" />-->
+
+<!--        &lt;!&ndash; Row 1 &ndash;&gt;-->
+<!--        <ImageView-->
+<!--            android:id="@+id/cell_1_0"-->
+<!--            android:layout_width="@dimen/rock_width"-->
+<!--            android:layout_height="@dimen/rock_height"-->
+<!--            android:layout_marginTop="110dp"-->
+<!--            android:layout_alignParentStart="true"-->
+<!--            android:translationX="-25dp"-->
+<!--            android:src="@drawable/rock"-->
+<!--            android:visibility="visible" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/cell_1_1"-->
+<!--            android:layout_width="@dimen/rock_width"-->
+<!--            android:layout_height="@dimen/rock_height"-->
+<!--            android:layout_marginTop="110dp"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:src="@drawable/rock"-->
+<!--            android:visibility="visible" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/cell_1_2"-->
+<!--            android:layout_width="@dimen/rock_width"-->
+<!--            android:layout_height="@dimen/rock_height"-->
+<!--            android:layout_marginTop="110dp"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:src="@drawable/rock"-->
+<!--            android:visibility="visible" />-->
+
+<!--        &lt;!&ndash; Row 2 &ndash;&gt;-->
+<!--        <ImageView-->
+<!--            android:id="@+id/cell_2_0"-->
+<!--            android:layout_width="@dimen/rock_width"-->
+<!--            android:layout_height="@dimen/rock_height"-->
+<!--            android:layout_marginTop="220dp"-->
+<!--            android:layout_alignParentStart="true"-->
+<!--            android:translationX="-25dp"-->
+<!--            android:src="@drawable/rock"-->
+<!--            android:visibility="visible" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/cell_2_1"-->
+<!--            android:layout_width="@dimen/rock_width"-->
+<!--            android:layout_height="@dimen/rock_height"-->
+<!--            android:layout_marginTop="220dp"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:src="@drawable/rock"-->
+<!--            android:visibility="visible" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/cell_2_2"-->
+<!--            android:layout_width="@dimen/rock_width"-->
+<!--            android:layout_height="@dimen/rock_height"-->
+<!--            android:layout_marginTop="220dp"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:src="@drawable/rock"-->
+<!--            android:visibility="visible" />-->
+
+<!--        &lt;!&ndash; Row 3 &ndash;&gt;-->
+<!--        <ImageView-->
+<!--            android:id="@+id/cell_3_0"-->
+<!--            android:layout_width="@dimen/rock_width"-->
+<!--            android:layout_height="@dimen/rock_height"-->
+<!--            android:layout_marginTop="330dp"-->
+<!--            android:layout_alignParentStart="true"-->
+<!--            android:translationX="-25dp"-->
+<!--            android:src="@drawable/rock"-->
+<!--            android:visibility="visible" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/cell_3_1"-->
+<!--            android:layout_width="@dimen/rock_width"-->
+<!--            android:layout_height="@dimen/rock_height"-->
+<!--            android:layout_marginTop="330dp"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:src="@drawable/rock"-->
+<!--            android:visibility="visible" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/cell_3_2"-->
+<!--            android:layout_width="@dimen/rock_width"-->
+<!--            android:layout_height="@dimen/rock_height"-->
+<!--            android:layout_marginTop="330dp"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:src="@drawable/rock"-->
+<!--            android:visibility="visible" />-->
+
+<!--        &lt;!&ndash; Row 4 &ndash;&gt;-->
+<!--        <ImageView-->
+<!--            android:id="@+id/cell_4_0"-->
+<!--            android:layout_width="@dimen/rock_width"-->
+<!--            android:layout_height="@dimen/rock_height"-->
+<!--            android:layout_marginTop="440dp"-->
+<!--            android:layout_alignParentStart="true"            -->
+<!--            android:translationX="-25dp"-->
+<!--            android:src="@drawable/rock"-->
+<!--            android:visibility="visible" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/cell_4_1"-->
+<!--            android:layout_width="@dimen/rock_width"-->
+<!--            android:layout_height="@dimen/rock_height"-->
+<!--            android:layout_marginTop="440dp"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:src="@drawable/rock"-->
+<!--            android:visibility="visible" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/cell_4_2"-->
+<!--            android:layout_width="@dimen/rock_width"-->
+<!--            android:layout_height="@dimen/rock_height"-->
+<!--            android:layout_marginTop="440dp"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:src="@drawable/rock"-->
+<!--            android:visibility="visible" />-->
+
+<!--        &lt;!&ndash; Row 5 &ndash;&gt;-->
+<!--        <ImageView-->
+<!--            android:id="@+id/cell_5_0"-->
+<!--            android:layout_width="@dimen/rock_width"-->
+<!--            android:layout_height="@dimen/rock_height"-->
+<!--            android:layout_marginTop="550dp"-->
+<!--            android:layout_alignParentStart="true"-->
+<!--            android:src="@drawable/rock"-->
+<!--            android:visibility="visible" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/cell_5_1"-->
+<!--            android:layout_width="@dimen/rock_width"-->
+<!--            android:layout_height="@dimen/rock_height"-->
+<!--            android:layout_marginTop="550dp"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:src="@drawable/rock"-->
+<!--            android:visibility="visible" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/cell_5_2"-->
+<!--            android:layout_width="@dimen/rock_width"-->
+<!--            android:layout_height="@dimen/rock_height"-->
+<!--            android:layout_marginTop="550dp"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:src="@drawable/rock"-->
+<!--            android:visibility="visible" />-->
+
+<!--        &lt;!&ndash; Row 6 &ndash;&gt;-->
+<!--        <ImageView-->
+<!--            android:id="@+id/cell_6_0"-->
+<!--            android:layout_width="@dimen/rock_width"-->
+<!--            android:layout_height="@dimen/rock_height"-->
+<!--            android:layout_marginTop="630dp"-->
+<!--            android:layout_alignParentStart="true"-->
+<!--            android:src="@drawable/rock"-->
+<!--            android:visibility="visible" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/cell_6_1"-->
+<!--            android:layout_width="@dimen/rock_width"-->
+<!--            android:layout_height="@dimen/rock_height"-->
+<!--            android:layout_marginTop="630dp"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:src="@drawable/rock"-->
+<!--            android:visibility="visible" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/cell_6_2"-->
+<!--            android:layout_width="@dimen/rock_width"-->
+<!--            android:layout_height="@dimen/rock_height"-->
+<!--            android:layout_marginTop="630dp"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:src="@drawable/rock"-->
+<!--            android:visibility="visible" />-->
+
+<!--        &lt;!&ndash; Row 7 &ndash;&gt;-->
+<!--        <ImageView-->
+<!--            android:id="@+id/cell_7_0"-->
+<!--            android:layout_width="@dimen/rock_width"-->
+<!--            android:layout_height="@dimen/rock_height"-->
+<!--            android:layout_marginTop="800dp"-->
+<!--            android:layout_alignParentStart="true"-->
+<!--            android:src="@drawable/rock"-->
+<!--            android:visibility="invisible" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/cell_7_1"-->
+<!--            android:layout_width="@dimen/rock_width"-->
+<!--            android:layout_height="@dimen/rock_height"-->
+<!--            android:layout_marginTop="800dp"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:src="@drawable/rock"-->
+<!--            android:visibility="invisible" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/cell_7_2"-->
+<!--            android:layout_width="@dimen/rock_width"-->
+<!--            android:layout_height="@dimen/rock_height"-->
+<!--            android:layout_marginTop="800dp"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:src="@drawable/rock"-->
+<!--            android:visibility="invisible" />-->
+
+<!--    </RelativeLayout>-->
 
 
     <com.google.android.material.button.MaterialButton

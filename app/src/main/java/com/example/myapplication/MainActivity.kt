@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var layout: RelativeLayout
     private lateinit var gameManager: GameManager
 
-    private val maxColumns = 3
+    private val maxColumns = 5
     private val maxRows = 8
 
 
@@ -52,40 +52,58 @@ class MainActivity : AppCompatActivity() {
         main_IMG_charcters = arrayOf(
             findViewById(R.id.main_IMG_character0),
             findViewById(R.id.main_IMG_character1),
-            findViewById(R.id.main_IMG_character2)
+            findViewById(R.id.main_IMG_character2),
+            findViewById(R.id.main_IMG_character3),
+            findViewById(R.id.main_IMG_character4)
         )
         main_IMG_rocks = arrayOf(
            arrayOf( findViewById(R.id.cell_0_0),
            findViewById(R.id.cell_0_1),
-           findViewById(R.id.cell_0_2)),
+           findViewById(R.id.cell_0_2),
+           findViewById(R.id.cell_0_3),
+           findViewById(R.id.cell_0_4)),
 
            arrayOf( findViewById(R.id.cell_1_0),
             findViewById(R.id.cell_1_1),
-            findViewById(R.id.cell_1_2)),
+            findViewById(R.id.cell_1_2),
+            findViewById(R.id.cell_1_3),
+            findViewById(R.id.cell_1_4)),
 
             arrayOf(findViewById(R.id.cell_2_0),
             findViewById(R.id.cell_2_1),
-            findViewById(R.id.cell_2_2)),
+            findViewById(R.id.cell_2_2),
+            findViewById(R.id.cell_2_3),
+            findViewById(R.id.cell_2_4)),
 
             arrayOf(findViewById(R.id.cell_3_0),
+            findViewById(R.id.cell_3_1),
+            findViewById(R.id.cell_3_2),
             findViewById(R.id.cell_3_1),
             findViewById(R.id.cell_3_2)),
 
             arrayOf(findViewById(R.id.cell_4_0),
             findViewById(R.id.cell_4_1),
-            findViewById(R.id.cell_4_2)),
+            findViewById(R.id.cell_4_2),
+            findViewById(R.id.cell_4_3),
+            findViewById(R.id.cell_4_4)),
 
             arrayOf(findViewById(R.id.cell_5_0),
             findViewById(R.id.cell_5_1),
-            findViewById(R.id.cell_5_2)),
+            findViewById(R.id.cell_5_2),
+            findViewById(R.id.cell_5_3),
+            findViewById(R.id.cell_5_4)),
 
             arrayOf(findViewById(R.id.cell_6_0),
             findViewById(R.id.cell_6_1),
-            findViewById(R.id.cell_6_2)),
+            findViewById(R.id.cell_6_2),
+            findViewById(R.id.cell_6_3),
+            findViewById(R.id.cell_6_4)),
 
             arrayOf(findViewById(R.id.cell_7_0),
             findViewById(R.id.cell_7_1),
-            findViewById(R.id.cell_7_2))
+            findViewById(R.id.cell_7_2),
+            findViewById(R.id.cell_7_3),
+            findViewById(R.id.cell_7_4))
         )
     }
 

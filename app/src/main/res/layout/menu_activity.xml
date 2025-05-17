@@ -1,0 +1,63 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/pink"
+    android:padding="24dp">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:id="@+id/menu_LBL_buttons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Use Buttons"
+            android:textSize="18sp"
+            android:layout_marginEnd="8dp" />
+
+        <Switch
+            android:id="@+id/menu_SWITCH_controlMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true" />
+
+        <TextView
+            android:id="@+id/menu_LBL_sensors"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Use Sensors"
+            android:textSize="18sp"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="0dp">
+
+        <Button
+            android:id="@+id/menu_BTN_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:text="Start Game" />
+
+        <Button
+        android:id="@+id/record_BTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="record table"
+        android:layout_marginTop="0dp"/>
+    </LinearLayout>
+
+</LinearLayout>

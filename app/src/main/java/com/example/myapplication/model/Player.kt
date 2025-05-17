@@ -17,4 +17,9 @@ class Player(
     fun loseLife() {
         lives--
     }
+    fun gainLife() {
+        if (lives < maxLives) {
+            lives++
+        }
+    }
 }

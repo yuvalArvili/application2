@@ -1,7 +1,10 @@
 package com.example.myapplication
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.RelativeLayout
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatImageView
 import com.example.myapplication.logic.GameManager
@@ -12,7 +15,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var main_IMG_hearts: Array<AppCompatImageView>
     private lateinit var main_IMG_charcters: Array<AppCompatImageView>
     private lateinit var main_IMG_rocks: Array<Array<AppCompatImageView>>
-
+    private lateinit var scoreCounter: TextView
     private lateinit var btnLeft: Button
     private lateinit var btnRight: Button
     private lateinit var layout: RelativeLayout
@@ -20,21 +23,29 @@ class MainActivity : AppCompatActivity() {
 
     private val maxColumns = 5
     private val maxRows = 8
+    private var useSensors: Boolean = false
+    private var gameSpeed: String = "SLOW"
 
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        useSensors = intent.getBooleanExtra("USE_SENSORS", false)
+        gameSpeed = intent.getStringExtra("GAME_SPEED") ?: "SLOW"
         setContentView(R.layout.activity_main)
         SignalManager.init(this)
         findViews()
 
-        gameManager = GameManager(maxColumns,
+        gameManager = GameManager(this,
+            maxColumns,
             maxRows,
             main_IMG_rocks,
             main_IMG_hearts,
-            main_IMG_charcters
+            main_IMG_charcters,
+            scoreCounter,
+            useSensors
         )
+
         game()
 
     }
@@ -43,6 +54,7 @@ class MainActivity : AppCompatActivity() {
         btnLeft = findViewById(R.id.main_BTN_left)
         btnRight = findViewById(R.id.main_BTN_right)
         layout = findViewById(R.id.main)
+        scoreCounter = findViewById(R.id.scoreCounter)
 
         main_IMG_hearts = arrayOf(
             findViewById(R.id.main_IMG_heart0),
@@ -78,8 +90,8 @@ class MainActivity : AppCompatActivity() {
             arrayOf(findViewById(R.id.cell_3_0),
             findViewById(R.id.cell_3_1),
             findViewById(R.id.cell_3_2),
-            findViewById(R.id.cell_3_1),
-            findViewById(R.id.cell_3_2)),
+            findViewById(R.id.cell_3_3),
+            findViewById(R.id.cell_3_4)),
 
             arrayOf(findViewById(R.id.cell_4_0),
             findViewById(R.id.cell_4_1),
@@ -106,8 +118,14 @@ class MainActivity : AppCompatActivity() {
             findViewById(R.id.cell_7_4))
         )
     }
-
+    private fun hideControlButtons() {
+        if (useSensors){
+           btnLeft.visibility = View.INVISIBLE
+            btnRight.visibility = View.INVISIBLE
+        }
+    }
     private fun game() {
+        hideControlButtons()
         gameManager.startGame()
 
         btnLeft.setOnClickListener {

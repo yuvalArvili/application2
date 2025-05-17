@@ -7,4 +7,6 @@
     <dimen name="name_size">32dp</dimen>
     <dimen name="rock_width">100dp</dimen>
     <dimen name="rock_height">100dp</dimen>
+    <dimen name="Type_text">20sp</dimen>
+    <dimen name="odometer_size">50sp</dimen>
 </resources>

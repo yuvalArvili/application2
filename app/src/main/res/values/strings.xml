@@ -2,4 +2,7 @@
     <string name="app_name">My Application</string>
     <string name="left_button">left</string>
     <string name="right_button">right</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="please_enter_location">Please Enter Location</string>
+    <string name="send">Send</string>
 </resources>

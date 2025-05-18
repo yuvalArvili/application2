@@ -68,9 +68,9 @@ class GameManager(
         }
     }
     override fun movePlayerBySensor(x: Float) {
-        if (x >= 1.0) {
+        if (x >= 3.0) {
             movePlayerLeft()
-        } else if (x <= -1.0) {
+        } else if (x <= -3.0) {
             movePlayerRight()
         }
     }

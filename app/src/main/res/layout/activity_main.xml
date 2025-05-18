@@ -99,377 +99,398 @@
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
-    <RelativeLayout
+
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/matrix_container"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <!-- ROW 0 -->
-        <ImageView android:id="@+id/cell_0_0"
-            android:layout_width="@dimen/rock_width"
-            android:layout_height="@dimen/rock_height"
-            android:layout_marginStart="-10dp"
-            android:layout_marginTop="0dp"
-            android:src="@drawable/rock"
-            android:visibility="visible" />
+        <!-- row 0 -->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5">
 
-        <ImageView android:id="@+id/cell_0_1"
-            android:layout_width="@dimen/rock_width"
-            android:layout_height="@dimen/rock_height"
-            android:layout_toEndOf="@id/cell_0_0"
-            android:layout_marginStart="-15dp"
-            android:layout_alignTop="@id/cell_0_0"
-            android:src="@drawable/rock"
-            android:visibility="visible" />
+            <ImageView
+                android:id="@+id/cell_0_0"
+                android:layout_width="@dimen/rock_width"
+                android:layout_height="@dimen/rock_height"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="visible" />
 
-        <ImageView android:id="@+id/cell_0_2"
-            android:layout_width="@dimen/rock_width"
-            android:layout_height="@dimen/rock_height"
-            android:layout_toEndOf="@id/cell_0_1"
-            android:layout_marginStart="-20dp"
-            android:layout_alignTop="@id/cell_0_0"
-            android:src="@drawable/rock"
-            android:visibility="visible" />
+            <ImageView
+                android:id="@+id/cell_0_1"
+                android:layout_width="@dimen/rock_width"
+                android:layout_height="@dimen/rock_height"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="visible" />
 
-        <ImageView android:id="@+id/cell_0_3"
-            android:layout_width="@dimen/rock_width"
-            android:layout_height="@dimen/rock_height"
-            android:layout_toEndOf="@id/cell_0_2"
-            android:layout_marginStart="-20dp"
-            android:layout_alignTop="@id/cell_0_0"
-            android:src="@drawable/rock"
-            android:visibility="visible" />
+            <ImageView
+                android:id="@+id/cell_0_2"
+                android:layout_width="@dimen/rock_width"
+                android:layout_height="@dimen/rock_height"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="visible" />
 
-        <ImageView android:id="@+id/cell_0_4"
-            android:layout_width="@dimen/rock_width"
-            android:layout_height="@dimen/rock_height"
-            android:layout_toEndOf="@id/cell_0_3"
-            android:layout_marginStart="-20dp"
-            android:layout_alignTop="@id/cell_0_0"
-            android:src="@drawable/rock"
-            android:visibility="visible" />
+            <ImageView
+                android:id="@+id/cell_0_3"
+                android:layout_width="@dimen/rock_width"
+                android:layout_height="@dimen/rock_height"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="visible" />
 
-        <!-- ROW 1 -->
-        <ImageView android:id="@+id/cell_1_0"
-            android:layout_width="@dimen/rock_width"
-            android:layout_height="@dimen/rock_height"
-            android:layout_marginStart="-10dp"
-            android:layout_marginTop="110dp"
-            android:src="@drawable/rock"
-            android:visibility="visible" />
+            <ImageView
+                android:id="@+id/cell_0_4"
+                android:layout_width="@dimen/rock_width"
+                android:layout_height="@dimen/rock_height"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="visible" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
-        <ImageView android:id="@+id/cell_1_1"
-            android:layout_width="@dimen/rock_width"
-            android:layout_height="@dimen/rock_height"
-            android:layout_toEndOf="@id/cell_1_0"
-            android:layout_marginStart="-15dp"
-            android:layout_alignTop="@id/cell_1_0"
-            android:src="@drawable/rock"
-            android:visibility="visible" />
+        <!-- row 1 -->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5">
 
-        <ImageView android:id="@+id/cell_1_2"
-            android:layout_width="@dimen/rock_width"
-            android:layout_height="@dimen/rock_height"
-            android:layout_toEndOf="@id/cell_1_1"
-            android:layout_marginStart="-20dp"
-            android:layout_alignTop="@id/cell_1_0"
-            android:src="@drawable/rock"
-            android:visibility="visible" />
+            <ImageView
+                android:id="@+id/cell_1_0"
+                android:layout_width="@dimen/rock_width"
+                android:layout_height="@dimen/rock_height"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="visible" />
 
-        <ImageView android:id="@+id/cell_1_3"
-            android:layout_width="@dimen/rock_width"
-            android:layout_height="@dimen/rock_height"
-            android:layout_toEndOf="@id/cell_1_2"
-            android:layout_marginStart="-20dp"
-            android:layout_alignTop="@id/cell_1_0"
-            android:src="@drawable/rock"
-            android:visibility="visible" />
+            <ImageView
+                android:id="@+id/cell_1_1"
+                android:layout_width="@dimen/rock_width"
+                android:layout_height="@dimen/rock_height"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="visible" />
 
-        <ImageView android:id="@+id/cell_1_4"
-            android:layout_width="@dimen/rock_width"
-            android:layout_height="@dimen/rock_height"
-            android:layout_toEndOf="@id/cell_1_3"
-            android:layout_marginStart="-20dp"
-            android:layout_alignTop="@id/cell_1_0"
-            android:src="@drawable/rock"
-            android:visibility="visible" />
+            <ImageView
+                android:id="@+id/cell_1_2"
+                android:layout_width="@dimen/rock_width"
+                android:layout_height="@dimen/rock_height"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="visible" />
 
-        <!-- ROW 2 -->
-        <ImageView android:id="@+id/cell_2_0"
-            android:layout_width="@dimen/rock_width"
-            android:layout_height="@dimen/rock_height"
-            android:layout_marginStart="-10dp"
-            android:layout_marginTop="220dp"
-            android:src="@drawable/rock"
-            android:visibility="visible" />
+            <ImageView
+                android:id="@+id/cell_1_3"
+                android:layout_width="@dimen/rock_width"
+                android:layout_height="@dimen/rock_height"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="visible" />
 
-        <ImageView android:id="@+id/cell_2_1"
-            android:layout_width="@dimen/rock_width"
-            android:layout_height="@dimen/rock_height"
-            android:layout_toEndOf="@id/cell_2_0"
-            android:layout_marginStart="-15dp"
-            android:layout_alignTop="@id/cell_2_0"
-            android:src="@drawable/rock"
-            android:visibility="visible" />
+            <ImageView
+                android:id="@+id/cell_1_4"
+                android:layout_width="@dimen/rock_width"
+                android:layout_height="@dimen/rock_height"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="visible" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
-        <ImageView android:id="@+id/cell_2_2"
-            android:layout_width="@dimen/rock_width"
-            android:layout_height="@dimen/rock_height"
-            android:layout_toEndOf="@id/cell_2_1"
-            android:layout_marginStart="-20dp"
-            android:layout_alignTop="@id/cell_2_0"
-            android:src="@drawable/rock"
-            android:visibility="visible" />
+        <!-- row 2 -->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5">
 
-        <ImageView android:id="@+id/cell_2_3"
-            android:layout_width="@dimen/rock_width"
-            android:layout_height="@dimen/rock_height"
-            android:layout_toEndOf="@id/cell_2_2"
-            android:layout_marginStart="-20dp"
-            android:layout_alignTop="@id/cell_2_0"
-            android:src="@drawable/rock"
-            android:visibility="visible" />
+            <ImageView
+                android:id="@+id/cell_2_0"
+                android:layout_width="@dimen/rock_width"
+                android:layout_height="@dimen/rock_height"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="visible" />
 
-        <ImageView android:id="@+id/cell_2_4"
-            android:layout_width="@dimen/rock_width"
-            android:layout_height="@dimen/rock_height"
-            android:layout_toEndOf="@id/cell_2_3"
-            android:layout_marginStart="-20dp"
-            android:layout_alignTop="@id/cell_2_0"
-            android:src="@drawable/rock"
-            android:visibility="visible" />
+            <ImageView
+                android:id="@+id/cell_2_1"
+                android:layout_width="@dimen/rock_width"
+                android:layout_height="@dimen/rock_height"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="visible" />
 
-        <!-- ROW 3 -->
-        <ImageView android:id="@+id/cell_3_0"
-            android:layout_width="@dimen/rock_width"
-            android:layout_height="@dimen/rock_height"
-            android:layout_marginStart="-10dp"
-            android:layout_marginTop="330dp"
-            android:src="@drawable/rock"
-            android:visibility="visible" />
+            <ImageView
+                android:id="@+id/cell_2_2"
+                android:layout_width="@dimen/rock_width"
+                android:layout_height="@dimen/rock_height"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="visible" />
 
-        <ImageView android:id="@+id/cell_3_1"
-            android:layout_width="@dimen/rock_width"
-            android:layout_height="@dimen/rock_height"
-            android:layout_toEndOf="@id/cell_3_0"
-            android:layout_marginStart="-15dp"
-            android:layout_alignTop="@id/cell_3_0"
-            android:src="@drawable/rock"
-            android:visibility="visible" />
+            <ImageView
+                android:id="@+id/cell_2_3"
+                android:layout_width="@dimen/rock_width"
+                android:layout_height="@dimen/rock_height"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="visible" />
 
-        <ImageView android:id="@+id/cell_3_2"
-            android:layout_width="@dimen/rock_width"
-            android:layout_height="@dimen/rock_height"
-            android:layout_toEndOf="@id/cell_3_1"
-            android:layout_marginStart="-20dp"
-            android:layout_alignTop="@id/cell_3_0"
-            android:src="@drawable/rock"
-            android:visibility="visible" />
+            <ImageView
+                android:id="@+id/cell_2_4"
+                android:layout_width="@dimen/rock_width"
+                android:layout_height="@dimen/rock_height"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="visible" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
-        <ImageView android:id="@+id/cell_3_3"
-            android:layout_width="@dimen/rock_width"
-            android:layout_height="@dimen/rock_height"
-            android:layout_toEndOf="@id/cell_3_2"
-            android:layout_marginStart="-20dp"
-            android:layout_alignTop="@id/cell_3_0"
-            android:src="@drawable/rock"
-            android:visibility="visible" />
+        <!-- row 3 -->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5">
 
-        <ImageView android:id="@+id/cell_3_4"
-            android:layout_width="@dimen/rock_width"
-            android:layout_height="@dimen/rock_height"
-            android:layout_toEndOf="@id/cell_3_3"
-            android:layout_marginStart="-20dp"
-            android:layout_alignTop="@id/cell_3_0"
-            android:src="@drawable/rock"
-            android:visibility="visible" />
+            <ImageView
+                android:id="@+id/cell_3_0"
+                android:layout_width="@dimen/rock_width"
+                android:layout_height="@dimen/rock_height"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="visible" />
 
-        <!-- ROW 4 -->
-        <ImageView android:id="@+id/cell_4_0"
-            android:layout_width="@dimen/rock_width"
-            android:layout_height="@dimen/rock_height"
-            android:layout_marginStart="-10dp"
-            android:layout_marginTop="440dp"
-            android:src="@drawable/rock"
-            android:visibility="visible" />
+            <ImageView
+                android:id="@+id/cell_3_1"
+                android:layout_width="@dimen/rock_width"
+                android:layout_height="@dimen/rock_height"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="visible" />
 
-        <ImageView android:id="@+id/cell_4_1"
-            android:layout_width="@dimen/rock_width"
-            android:layout_height="@dimen/rock_height"
-            android:layout_toEndOf="@id/cell_4_0"
-            android:layout_marginStart="-15dp"
-            android:layout_alignTop="@id/cell_4_0"
-            android:src="@drawable/rock"
-            android:visibility="visible" />
+            <ImageView
+                android:id="@+id/cell_3_2"
+                android:layout_width="@dimen/rock_width"
+                android:layout_height="@dimen/rock_height"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="visible" />
 
-        <ImageView android:id="@+id/cell_4_2"
-            android:layout_width="@dimen/rock_width"
-            android:layout_height="@dimen/rock_height"
-            android:layout_toEndOf="@id/cell_4_1"
-            android:layout_marginStart="-20dp"
-            android:layout_alignTop="@id/cell_4_0"
-            android:src="@drawable/rock"
-            android:visibility="visible" />
+            <ImageView
+                android:id="@+id/cell_3_3"
+                android:layout_width="@dimen/rock_width"
+                android:layout_height="@dimen/rock_height"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="visible" />
 
-        <ImageView android:id="@+id/cell_4_3"
-            android:layout_width="@dimen/rock_width"
-            android:layout_height="@dimen/rock_height"
-            android:layout_toEndOf="@id/cell_4_2"
-            android:layout_marginStart="-20dp"
-            android:layout_alignTop="@id/cell_4_0"
-            android:src="@drawable/rock"
-            android:visibility="visible" />
+            <ImageView
+                android:id="@+id/cell_3_4"
+                android:layout_width="@dimen/rock_width"
+                android:layout_height="@dimen/rock_height"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="visible" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
-        <ImageView android:id="@+id/cell_4_4"
-            android:layout_width="@dimen/rock_width"
-            android:layout_height="@dimen/rock_height"
-            android:layout_toEndOf="@id/cell_4_3"
-            android:layout_marginStart="-20dp"
-            android:layout_alignTop="@id/cell_4_0"
-            android:src="@drawable/rock"
-            android:visibility="visible" />
+        <!-- row 4 -->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5">
 
-        <!-- ROW 5 -->
-        <ImageView android:id="@+id/cell_5_0"
-            android:layout_width="@dimen/rock_width"
-            android:layout_height="@dimen/rock_height"
-            android:layout_marginStart="-10dp"
-            android:layout_marginTop="550dp"
-            android:src="@drawable/rock"
-            android:visibility="visible" />
+            <ImageView
+                android:id="@+id/cell_4_0"
+                android:layout_width="@dimen/rock_width"
+                android:layout_height="@dimen/rock_height"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="visible" />
 
-        <ImageView android:id="@+id/cell_5_1"
-            android:layout_width="@dimen/rock_width"
-            android:layout_height="@dimen/rock_height"
-            android:layout_toEndOf="@id/cell_5_0"
-            android:layout_marginStart="-15dp"
-            android:layout_alignTop="@id/cell_5_0"
-            android:src="@drawable/rock"
-            android:visibility="visible" />
+            <ImageView
+                android:id="@+id/cell_4_1"
+                android:layout_width="@dimen/rock_width"
+                android:layout_height="@dimen/rock_height"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="visible" />
 
-        <ImageView android:id="@+id/cell_5_2"
-            android:layout_width="@dimen/rock_width"
-            android:layout_height="@dimen/rock_height"
-            android:layout_toEndOf="@id/cell_5_1"
-            android:layout_marginStart="-20dp"
-            android:layout_alignTop="@id/cell_5_0"
-            android:src="@drawable/rock"
-            android:visibility="visible" />
+            <ImageView
+                android:id="@+id/cell_4_2"
+                android:layout_width="@dimen/rock_width"
+                android:layout_height="@dimen/rock_height"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="visible" />
 
-        <ImageView android:id="@+id/cell_5_3"
-            android:layout_width="@dimen/rock_width"
-            android:layout_height="@dimen/rock_height"
-            android:layout_toEndOf="@id/cell_5_2"
-            android:layout_marginStart="-20dp"
-            android:layout_alignTop="@id/cell_5_0"
-            android:src="@drawable/rock"
-            android:visibility="visible" />
+            <ImageView
+                android:id="@+id/cell_4_3"
+                android:layout_width="@dimen/rock_width"
+                android:layout_height="@dimen/rock_height"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="visible" />
 
-        <ImageView android:id="@+id/cell_5_4"
-            android:layout_width="@dimen/rock_width"
-            android:layout_height="@dimen/rock_height"
-            android:layout_toEndOf="@id/cell_5_3"
-            android:layout_marginStart="-20dp"
-            android:layout_alignTop="@id/cell_5_0"
-            android:src="@drawable/rock"
-            android:visibility="visible" />
+            <ImageView
+                android:id="@+id/cell_4_4"
+                android:layout_width="@dimen/rock_width"
+                android:layout_height="@dimen/rock_height"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="visible" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
+        <!-- row 5 -->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5">
 
-        <!-- ROW 6 -->
-        <ImageView android:id="@+id/cell_6_0"
-            android:layout_width="@dimen/rock_width"
-            android:layout_height="@dimen/rock_height"
-            android:layout_marginStart="-10dp"
-            android:layout_marginTop="660dp"
-            android:src="@drawable/rock"
-            android:visibility="visible" />
+            <ImageView
+                android:id="@+id/cell_5_0"
+                android:layout_width="@dimen/rock_width"
+                android:layout_height="@dimen/rock_height"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="visible" />
 
-        <ImageView android:id="@+id/cell_6_1"
-            android:layout_width="@dimen/rock_width"
-            android:layout_height="@dimen/rock_height"
-            android:layout_toEndOf="@id/cell_6_0"
-            android:layout_marginStart="-15dp"
-            android:layout_alignTop="@id/cell_6_0"
-            android:src="@drawable/rock"
-            android:visibility="visible" />
+            <ImageView
+                android:id="@+id/cell_5_1"
+                android:layout_width="@dimen/rock_width"
+                android:layout_height="@dimen/rock_height"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="visible" />
 
-        <ImageView android:id="@+id/cell_6_2"
-            android:layout_width="@dimen/rock_width"
-            android:layout_height="@dimen/rock_height"
-            android:layout_toEndOf="@id/cell_6_1"
-            android:layout_marginStart="-20dp"
-            android:layout_alignTop="@id/cell_6_0"
-            android:src="@drawable/rock"
-            android:visibility="visible" />
+            <ImageView
+                android:id="@+id/cell_5_2"
+                android:layout_width="@dimen/rock_width"
+                android:layout_height="@dimen/rock_height"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="visible" />
 
-        <ImageView android:id="@+id/cell_6_3"
-            android:layout_width="@dimen/rock_width"
-            android:layout_height="@dimen/rock_height"
-            android:layout_toEndOf="@id/cell_6_2"
-            android:layout_marginStart="-20dp"
-            android:layout_alignTop="@id/cell_6_0"
-            android:src="@drawable/rock"
-            android:visibility="visible" />
+            <ImageView
+                android:id="@+id/cell_5_3"
+                android:layout_width="@dimen/rock_width"
+                android:layout_height="@dimen/rock_height"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="visible" />
 
-        <ImageView android:id="@+id/cell_6_4"
-            android:layout_width="@dimen/rock_width"
-            android:layout_height="@dimen/rock_height"
-            android:layout_toEndOf="@id/cell_6_3"
-            android:layout_marginStart="-20dp"
-            android:layout_alignTop="@id/cell_6_0"
-            android:src="@drawable/rock"
-            android:visibility="visible" />
+            <ImageView
+                android:id="@+id/cell_5_4"
+                android:layout_width="@dimen/rock_width"
+                android:layout_height="@dimen/rock_height"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="visible" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
-        <!-- ROW 7 -->
-        <ImageView android:id="@+id/cell_7_0"
-            android:layout_width="@dimen/rock_width"
-            android:layout_height="@dimen/rock_height"
-            android:layout_marginStart="-10dp"
-            android:layout_marginTop="770dp"
-            android:src="@drawable/rock"
-            android:visibility="invisible" />
+        <!-- row 6 -->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5">
 
-        <ImageView android:id="@+id/cell_7_1"
-            android:layout_width="@dimen/rock_width"
-            android:layout_height="@dimen/rock_height"
-            android:layout_toEndOf="@id/cell_7_0"
-            android:layout_marginStart="-15dp"
-            android:layout_alignTop="@id/cell_7_0"
-            android:src="@drawable/rock"
-            android:visibility="invisible" />
+            <ImageView
+                android:id="@+id/cell_6_0"
+                android:layout_width="@dimen/rock_width"
+                android:layout_height="@dimen/rock_height"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="visible" />
 
-        <ImageView android:id="@+id/cell_7_2"
-            android:layout_width="@dimen/rock_width"
-            android:layout_height="@dimen/rock_height"
-            android:layout_toEndOf="@id/cell_7_1"
-            android:layout_marginStart="-20dp"
-            android:layout_alignTop="@id/cell_7_0"
-            android:src="@drawable/rock"
-            android:visibility="invisible" />
+            <ImageView
+                android:id="@+id/cell_6_1"
+                android:layout_width="@dimen/rock_width"
+                android:layout_height="@dimen/rock_height"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="visible" />
 
-        <ImageView android:id="@+id/cell_7_3"
-            android:layout_width="@dimen/rock_width"
-            android:layout_height="@dimen/rock_height"
-            android:layout_toEndOf="@id/cell_7_2"
-            android:layout_marginStart="-20dp"
-            android:layout_alignTop="@id/cell_7_0"
-            android:src="@drawable/rock"
-            android:visibility="invisible" />
+            <ImageView
+                android:id="@+id/cell_6_2"
+                android:layout_width="@dimen/rock_width"
+                android:layout_height="@dimen/rock_height"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="visible" />
 
-        <ImageView android:id="@+id/cell_7_4"
-            android:layout_width="@dimen/rock_width"
-            android:layout_height="@dimen/rock_height"
-            android:layout_toEndOf="@id/cell_7_3"
-            android:layout_marginStart="-20dp"
-            android:layout_alignTop="@id/cell_7_0"
-            android:src="@drawable/rock"
-            android:visibility="invisible" />
+            <ImageView
+                android:id="@+id/cell_6_3"
+                android:layout_width="@dimen/rock_width"
+                android:layout_height="@dimen/rock_height"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="visible" />
 
-    </RelativeLayout>
+            <ImageView
+                android:id="@+id/cell_6_4"
+                android:layout_width="@dimen/rock_width"
+                android:layout_height="@dimen/rock_height"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="visible" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
+        <!-- row 7 -->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5">
 
+            <ImageView
+                android:id="@+id/cell_7_0"
+                android:layout_width="@dimen/rock_width"
+                android:layout_height="@dimen/rock_height"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="visible" />
 
+            <ImageView
+                android:id="@+id/cell_7_1"
+                android:layout_width="@dimen/rock_width"
+                android:layout_height="@dimen/rock_height"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/cell_7_2"
+                android:layout_width="@dimen/rock_width"
+                android:layout_height="@dimen/rock_height"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/cell_7_3"
+                android:layout_width="@dimen/rock_width"
+                android:layout_height="@dimen/rock_height"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/cell_7_4"
+                android:layout_width="@dimen/rock_width"
+                android:layout_height="@dimen/rock_height"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="visible" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/main_BTN_left"

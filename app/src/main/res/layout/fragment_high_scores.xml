@@ -4,14 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/turquoise"
+    android:background="@drawable/item_leaderboard_bg"
     tools:context=".ui.HighScoresFragment">
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/back_menu_BTN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="10dp"
         app:icon="@drawable/left"
         app:iconSize="30dp"
         app:iconTint="@android:color/black"
@@ -19,22 +19,33 @@
     />
 
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/highScores_ET_text"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/leaderboard_title"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:inputType="text"
-        android:gravity="center"
-        android:hint="@string/please_enter_location" />
+        android:text="High Score Table 🏆"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_margin="@dimen/default_margin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="12dp" />
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/leaderboard_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/leaderboard_title"
+        android:layout_marginTop="0dp" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/highScores_BTN_send"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/send"
-        android:layout_below="@id/highScores_ET_text"
         android:layout_centerHorizontal="true"
+        android:visibility="invisible"
         android:layout_marginTop="@dimen/default_margin"
         />
 

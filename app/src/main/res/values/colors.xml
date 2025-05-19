@@ -4,5 +4,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="turquoise">#6DD8E6</color>
     <color name="pink">#EEA1EF</color>
-
+    <color name="pink_300">#F06292</color>
+    <color name="blue_300">#64B5F6</color>
+    <color name="purple_300">#BA68C8</color>
 </resources>

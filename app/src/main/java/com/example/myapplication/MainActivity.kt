@@ -1,4 +1,5 @@
 package com.example.myapplication
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -8,6 +9,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatImageView
 import com.example.myapplication.logic.GameManager
+import com.example.myapplication.logic.HighScoreManager
 import com.example.myapplication.utilites.SignalManager
 
 
@@ -20,18 +22,16 @@ class MainActivity : AppCompatActivity() {
     private lateinit var btnRight: Button
     private lateinit var layout: RelativeLayout
     private lateinit var gameManager: GameManager
-
+    private lateinit var highScoreManager: HighScoreManager
     private val maxColumns = 5
     private val maxRows = 8
     private var useSensors: Boolean = false
-    private var gameSpeed: String = "SLOW"
 
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         useSensors = intent.getBooleanExtra("USE_SENSORS", false)
-        gameSpeed = intent.getStringExtra("GAME_SPEED") ?: "SLOW"
         setContentView(R.layout.activity_main)
         SignalManager.init(this)
         findViews()
@@ -46,6 +46,13 @@ class MainActivity : AppCompatActivity() {
             useSensors
         )
 
+        gameManager.onGameOver = {
+            runOnUiThread {
+                val intent = Intent(this, MenuActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
+        }
         game()
 
     }
@@ -136,6 +143,15 @@ class MainActivity : AppCompatActivity() {
             gameManager.movePlayerRight()
         }
     }
+
+
+//     fun endWithMenu() {
+//        gameManager.stopGame()
+//        val intent = Intent(this, MenuActivity::class.java)
+//        startActivity(intent)
+//        finish()
+//    }
+
 }
 
 

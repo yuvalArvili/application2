@@ -15,36 +15,6 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.google.android.material.textview.MaterialTextView
 
-//class MapFragment : Fragment() {
-//
-//    private lateinit var map_LBL_title: MaterialTextView
-//
-//
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//
-//    }
-//
-//    override fun onCreateView(
-//        inflater: LayoutInflater, container: ViewGroup?,
-//        savedInstanceState: Bundle?
-//    ): View? {
-//        var v:View = inflater.inflate(R.layout.fragment_map, container, false)
-//        return v
-//    }
-//
-//
-//
-//    fun zoom(lat:Double, lon:Double){
-//        map_LBL_title.text = buildString {
-//            append("📍\n")
-//            append(lat)
-//            append(",\n")
-//            append(lon)
-//        }
-//    }
-//}
-
 class MapFragment : Fragment(), OnMapReadyCallback {
 
     private lateinit var map_LBL_title: MaterialTextView
@@ -72,17 +42,20 @@ class MapFragment : Fragment(), OnMapReadyCallback {
         val defaultLatLng = LatLng(32.0853, 34.7818)
         googleMap?.moveCamera(CameraUpdateFactory.newLatLngZoom(defaultLatLng, 12f))
     }
-    fun addCurrentLocationMarker(location: Location) {
-        val latLng = LatLng(location.latitude, location.longitude)
-        googleMap?.addMarker(MarkerOptions().position(latLng).title("📍 Current Location"))
-        googleMap?.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 15f))
 
-        map_LBL_title.text = buildString {
-            append("📍\n")
-            append(location.latitude)
-            append(",\n")
-            append(location.longitude)
+        fun moveToHighScoreLocation(lat: Double, lon: Double) {
+            val latLng = LatLng(lat, lon)
+            googleMap?.addMarker(MarkerOptions().position(latLng).title("🎯 High Score Location"))
+            googleMap?.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 15f))
+
+            map_LBL_title.text = buildString {
+                append("🎯\n")
+                append(lat)
+                append(",\n")
+                append(lon)
+            }
         }
+
     }
 
 //    fun zoom(lat:Double, lon:Double){
@@ -94,5 +67,5 @@ class MapFragment : Fragment(), OnMapReadyCallback {
 //        }
 //    }
 
-}
+
 

@@ -1,12 +1,13 @@
 package com.example.myapplication.logic
+import android.Manifest
 import android.content.Context
-import android.os.Handler
-import android.os.Looper
+import android.content.pm.PackageManager
 import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.widget.AppCompatImageView
+import androidx.core.app.ActivityCompat
 import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
 import com.example.myapplication.R
@@ -14,7 +15,11 @@ import com.example.myapplication.model.Player
 import com.example.myapplication.utilites.SignalManager
 import com.example.myapplication.utilites.SingleSoundPlayer
 import com.example.myapplication.interfaces.TiltCallback
+import com.example.myapplication.model.HighScore
 import com.example.myapplication.utilites.TiltDetector
+import com.google.android.gms.location.FusedLocationProviderClient
+import com.google.android.gms.location.LocationServices
+import com.google.android.gms.tasks.CancellationTokenSource
 
 class GameManager(
     private val context: Context,
@@ -27,9 +32,13 @@ class GameManager(
     private val useSensors: Boolean,
 ) : TiltCallback {
 
+    private var fusedLocationClient: FusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(context)
     private var tiltDetector: TiltDetector? = null
     private val player = Player(column = 2, lives = hearts.size)
     private var meters = 0
+    private var scoreManager = HighScoreManager()
+    var onGameOver: (() -> Unit)? = null
+
     private val rockManager = RockManager(maxColumns, maxRows,screenMatrix,hearts) {
         checkCollision()
         updateHeartsUI()
@@ -183,29 +192,60 @@ class GameManager(
     private fun checkGameOver() {
         if (player.lives <= 0) {
             SignalManager.getInstance().toast("Game Over!")
-            restartGame()
+            stopGame()
         }
     }
 
-    private fun restartGame() {
-        tiltDetector?.stop()
-        rockManager.stop()
-        meters = 0
-        updateMetersUI()
-        rockManager.clearAllRocks()
-        player.lives = player.maxLives
-        player.column = maxColumns / 2
+     fun stopGame() {
+         getCurrentLocationAndSaveHighScore()
+         tiltDetector?.stop()
+         rockManager.stop()
+         onGameOver?.invoke()
+//        scoreManager.saveHighScores(meters,)
+//        meters = 0
+//        updateMetersUI()
+//        rockManager.clearAllRocks()
+//        player.lives = player.maxLives
+//        player.column = maxColumns / 2
 
-        updateHeartsUI()
-        cleanScreen()
-        SignalManager.
-        getInstance().
-        toast("Game Restarted!")
+//        updateHeartsUI()
+//        cleanScreen()
+//        SignalManager.
+//        getInstance().
+//        toast("Game Restarted!")
+//
+//        Handler(Looper.getMainLooper()).postDelayed({
+//            startGame()
+//        }, 5000)
 
-        Handler(Looper.getMainLooper()).postDelayed({
-            startGame()
-        }, 5000)
+    }
 
+    private fun getCurrentLocationAndSaveHighScore() {
+        if (ActivityCompat.checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            saveHighScoreWithoutLocation()
+            return
+        }
+
+        fusedLocationClient.getCurrentLocation(
+            com.google.android.gms.location.LocationRequest.PRIORITY_HIGH_ACCURACY,
+            CancellationTokenSource().token
+        ).addOnSuccessListener { location ->
+            if (location != null) {
+                val lat = location.latitude
+                val lon = location.longitude
+                val newHighScore = HighScore(meters, lat, lon)
+                scoreManager.updateHighScores(context, newHighScore)
+            } else {
+                saveHighScoreWithoutLocation()
+            }
+        }.addOnFailureListener {
+            saveHighScoreWithoutLocation()
+        }
+    }
+
+    private fun saveHighScoreWithoutLocation() {
+        val newHighScore = HighScore(meters, 0.0, 0.0)
+        scoreManager.updateHighScores(context, newHighScore)
     }
 }
 

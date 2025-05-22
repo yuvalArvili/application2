@@ -2,7 +2,6 @@ package com.example.myapplication.logic
 import android.Manifest
 import android.content.Context
 import android.content.pm.PackageManager
-import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
@@ -201,28 +200,14 @@ class GameManager(
          tiltDetector?.stop()
          rockManager.stop()
          onGameOver?.invoke()
-//        scoreManager.saveHighScores(meters,)
-//        meters = 0
-//        updateMetersUI()
-//        rockManager.clearAllRocks()
-//        player.lives = player.maxLives
-//        player.column = maxColumns / 2
 
-//        updateHeartsUI()
-//        cleanScreen()
-//        SignalManager.
-//        getInstance().
-//        toast("Game Restarted!")
-//
-//        Handler(Looper.getMainLooper()).postDelayed({
-//            startGame()
-//        }, 5000)
 
     }
 
     private fun getCurrentLocationAndSaveHighScore() {
         if (ActivityCompat.checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             saveHighScoreWithoutLocation()
+            onGameOver?.invoke()
             return
         }
 
@@ -230,18 +215,17 @@ class GameManager(
             com.google.android.gms.location.LocationRequest.PRIORITY_HIGH_ACCURACY,
             CancellationTokenSource().token
         ).addOnSuccessListener { location ->
-            if (location != null) {
-                val lat = location.latitude
-                val lon = location.longitude
-                val newHighScore = HighScore(meters, lat, lon)
-                scoreManager.updateHighScores(context, newHighScore)
-            } else {
-                saveHighScoreWithoutLocation()
-            }
+            val lat = location?.latitude ?: 0.0
+            val lon = location?.longitude ?: 0.0
+            val newHighScore = HighScore(meters, lat, lon)
+            scoreManager.updateHighScores(context, newHighScore)
+            onGameOver?.invoke()
         }.addOnFailureListener {
             saveHighScoreWithoutLocation()
+            onGameOver?.invoke()
         }
     }
+
 
     private fun saveHighScoreWithoutLocation() {
         val newHighScore = HighScore(meters, 0.0, 0.0)

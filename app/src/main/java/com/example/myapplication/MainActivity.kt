@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatImageView
 import com.example.myapplication.logic.GameManager
 import com.example.myapplication.logic.HighScoreManager
+import com.example.myapplication.ui.MainFragment
 import com.example.myapplication.utilites.SignalManager
 
 
@@ -22,7 +23,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var btnRight: Button
     private lateinit var layout: RelativeLayout
     private lateinit var gameManager: GameManager
-    private lateinit var highScoreManager: HighScoreManager
     private val maxColumns = 5
     private val maxRows = 8
     private var useSensors: Boolean = false
@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
 
         gameManager.onGameOver = {
             runOnUiThread {
-                val intent = Intent(this, MenuActivity::class.java)
+                val intent = Intent(this, MainFragment::class.java)
                 startActivity(intent)
                 finish()
             }
@@ -145,12 +145,6 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-//     fun endWithMenu() {
-//        gameManager.stopGame()
-//        val intent = Intent(this, MenuActivity::class.java)
-//        startActivity(intent)
-//        finish()
-//    }
 
 }
 

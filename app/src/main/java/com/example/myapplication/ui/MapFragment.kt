@@ -58,14 +58,7 @@ class MapFragment : Fragment(), OnMapReadyCallback {
 
     }
 
-//    fun zoom(lat:Double, lon:Double){
-//        map_LBL_title.text = buildString {
-//            append("📍\n")
-//            append(lat)
-//            append(",\n")
-//            append(lon)
-//        }
-//    }
+
 
 
 

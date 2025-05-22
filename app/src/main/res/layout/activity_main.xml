@@ -11,7 +11,7 @@
         android:id="@+id/scoreCounter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="000"
+        android:text="@string/meters_count"
         android:textSize="@dimen/odometer_size"
         android:textColor="@android:color/black"
         android:textStyle="bold"

@@ -23,7 +23,7 @@
         android:id="@+id/leaderboard_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="High Score Table 🏆"
+        android:text="@string/high_score_table"
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_margin="@dimen/default_margin"
@@ -39,14 +39,5 @@
         android:layout_below="@id/leaderboard_title"
         android:layout_marginTop="0dp" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/highScores_BTN_send"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/send"
-        android:layout_centerHorizontal="true"
-        android:visibility="invisible"
-        android:layout_marginTop="@dimen/default_margin"
-        />
 
 </RelativeLayout>

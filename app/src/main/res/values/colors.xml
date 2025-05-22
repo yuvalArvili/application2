@@ -7,4 +7,6 @@
     <color name="pink_300">#F06292</color>
     <color name="blue_300">#64B5F6</color>
     <color name="purple_300">#BA68C8</color>
+    <color name="item_background">#CCCCCC</color>
+    <color name="item_num">#FFD700</color>
 </resources>

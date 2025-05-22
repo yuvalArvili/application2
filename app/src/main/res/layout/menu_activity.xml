@@ -18,7 +18,7 @@
             android:id="@+id/menu_LBL_buttons"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Use Buttons"
+            android:text="@string/use_buttons"
             android:textSize="18sp"
             android:layout_marginEnd="8dp" />
 
@@ -32,7 +32,7 @@
             android:id="@+id/menu_LBL_sensors"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Use Sensors"
+            android:text="@string/use_sensors"
             android:textSize="18sp"
             android:layout_marginStart="8dp" />
     </LinearLayout>
@@ -50,13 +50,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
-            android:text="Start Game" />
+            android:text="@string/start_game" />
 
         <Button
         android:id="@+id/record_BTN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="record table"
+        android:text="@string/record_table"
         android:layout_marginTop="0dp"/>
     </LinearLayout>
 

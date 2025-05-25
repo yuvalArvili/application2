@@ -18,7 +18,6 @@ import com.google.android.material.button.MaterialButton
 
 class HighScoresFragment : Fragment() {
 
-    private lateinit var highScores_BTN_send: MaterialButton
     private lateinit var back_menu_BTN: MaterialButton
     private lateinit var fusedLocationClient: FusedLocationProviderClient
     private lateinit var recyclerView: RecyclerView
@@ -46,7 +45,6 @@ class HighScoresFragment : Fragment() {
     }
 
     private fun findViews(view: android.view.View) {
-        highScores_BTN_send = view.findViewById(R.id.highScores_BTN_send)
         back_menu_BTN = view.findViewById(R.id.back_menu_BTN)
         recyclerView = view.findViewById(R.id.leaderboard_recycler)
     }

@@ -85,9 +85,8 @@ class GameManager(
 
     override fun adjustRockSpeedByTilt(y: Float) {
         val maxTilt = 5.0f
-        val minDelay = 1500L
-        val maxDelay = 500L
-
+        val minDelay = 300L
+        val maxDelay = 1500L
         val clampedTilt = y.coerceIn(0f, maxTilt)
         val delay = ((1 - (clampedTilt / maxTilt)) * (maxDelay - minDelay) + minDelay).toLong()
 

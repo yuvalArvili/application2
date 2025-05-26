@@ -198,8 +198,6 @@ class GameManager(
          getCurrentLocationAndSaveHighScore()
          tiltDetector?.stop()
          rockManager.stop()
-         onGameOver?.invoke()
-
 
     }
 

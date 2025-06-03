@@ -50,11 +50,5 @@ Players can choose between **tilt-based sensor control** and **button-based cont
 - Uses:
     - `RecyclerView` for score table
     - **Google Maps API** for location display
-
-## 📽️ Demo
-
-Watch a short demo video of the game here:  
-👉 *[Insert YouTube or Google Drive link here]*
-
 ---
 

@@ -71,4 +71,3 @@ To build and run the app locally:
 5. Click "Run" (▶) to build and launch the game.
 
 ---
-

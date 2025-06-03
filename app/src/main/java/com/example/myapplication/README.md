@@ -37,18 +37,38 @@ Players can choose between **tilt-based sensor control** and **button-based cont
     2. **Map View** – shows where each high score occurred
 - Selecting a score in the table updates the map accordingly
 
-## 📦 Project Structure
+## 📂 Project Structure
 
-- Modular codebase:
-    - `GameManager` – handles main game logic
-    - `RockManager` – generates and manages obstacles
-    - `HighScoreManager` – tracks scores and locations
-    -  `TiltDetector` – manages all the sensors' work
-  
-    - Additional helper classes handle animations, sound effects, UI elements, and data persistence.
+- `app/src/main/java/com/example/myapplication/` – Main game logic and UI
+- `.../utilites/TiltDetector.kt` – Tilt control logic using sensors
+- `.../utilites/SingleSoundPlayer.kt` – Handles sound playback
+- `res/drawable` – Game graphics (player, rocks, hearts, etc.)
+- `res/layout` – XML UI definitions
 
 - Uses:
     - `RecyclerView` for score table
+    - `SharedPreferences` for saving the score table
     - **Google Maps API** for location display
+
+## 🛠️ Tech Stack
+
+- **Language**: Kotlin
+- **Framework**: Android SDK (compileSdk 35, minSdk 26)
+- **Build System**: Gradle (Kotlin DSL)
+- **Java Compatibility**: Java 11 (JVM target 11)
+- **UI Components**: Material Design (com.google.android.material)
+- **Sensors**: Accelerometer via `SensorManager` (for tilt-based control)
+- **Sound**: MediaPlayer / SoundPool for sound effects
+
+## 🚀 Getting Started
+
+To build and run the app locally:
+
+1. Clone the repository or download the ZIP.
+2. Open the project in **Android Studio** (preferably Electric Eel or newer).
+3. Let Gradle sync all dependencies.
+4. Connect an Android device or use an emulator (API 26+).
+5. Click "Run" (▶) to build and launch the game.
+
 ---
 
